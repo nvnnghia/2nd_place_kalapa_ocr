@@ -12,7 +12,7 @@ cfg.batch_size = 32
 cfg.train_epoch = 200
 cfg.lr = 2e-4
 cfg.load_weight = 'outputs/b1_384_ptr_f5/b1_384_ptr_f5_last.pth'
-cfg.fold = 0
+cfg.fold = 5
 
 cfg.train_transform = A.Compose([
         A.Resize(height=cfg.in_h, width=cfg.in_w, interpolation=1, p=1),

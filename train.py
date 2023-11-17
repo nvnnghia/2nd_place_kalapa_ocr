@@ -602,9 +602,9 @@ if __name__ == '__main__':
             if epoch>99 and epoch%5==0:
                 torch.save(model.state_dict(), f'{out_dir}/{out_name}_ep{epoch}.pth')
 
-            torch.save(model.state_dict(), f'{out_dir}/{out_name}_last.pth')
+            # torch.save(model.state_dict(), f'{out_dir}/{out_name}_last.pth')
 
-        torch.save(model.half().state_dict(), f'{out_dir}/{out_name}_last.pth')
+        # torch.save(model.half().state_dict(), f'{out_dir}/{out_name}_last.pth')
 
         #postprocess weight
         if not cfg.is_pretrain:
@@ -628,4 +628,7 @@ if __name__ == '__main__':
                 if isinstance(swa_chkp['state_dict'][k], torch.FloatTensor):
                     swa_chkp['state_dict'][k] = (swa_chkp['state_dict'][k]/count).half()
             torch.save(swa_chkp['state_dict'], f'{out_dir}/{out_name}_swa.pth')
+        else:
+            torch.save(model.half().state_dict(), f'{out_dir}/{out_name}_last.pth')
+
 
