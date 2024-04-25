@@ -60,4 +60,5 @@ $ python train.py -C b2_256_f5
 ## 4.INFERENCE
 
 * Refer to submitted notebook
+* Weights: https://drive.google.com/file/d/1CsWm4RT6tW-u8A0avVPiooZv9G_Lxpm6/view?usp=sharing  
 
